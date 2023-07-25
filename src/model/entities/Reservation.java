@@ -9,7 +9,7 @@ public class Reservation {
     private Integer roomNumber;
     private Date checkIn;
     private Date checkOut;
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
         this.roomNumber = roomNumber;
@@ -44,12 +44,12 @@ public class Reservation {
     }
 
     @Override
-    public String ToString() {
-        return "Room"
+    public String toString() {
+        return "Room "
                 + roomNumber
                 + ", check-in: "
                 + sdf.format(checkIn)
-                + ", chech-out: "
+                + ", check-out: "
                 + sdf.format(checkOut)
                 + ", "
                 + duration()
